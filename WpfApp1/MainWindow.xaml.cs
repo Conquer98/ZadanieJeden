@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Collections;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -12,16 +14,52 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Windows.Media.Animation;
+
 namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+        Random random = new Random();
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddEnemy();
+        }
+
+        private void AddEnemy()
+        {
+            ContentControl enemy = new ContentControl();
+            enemy.Template = Resources["EnemyTemplate"] as ControlTemplate;
+            AnimateEnemy(enemy, 0, PlayArea.ActualWidth +200, "(Canvas.Left)");
+            AnimateEnemy(enemy, random.Next((int)PlayArea.ActualHeight +200),
+                random.Next((int)PlayArea.ActualHeight +200), "(Canvas.Top)");
+            PlayArea.Children.Add(enemy);
+        }
+
+        private void AnimateEnemy(ContentControl enemy, double from, double to, string PropertyToAnimate)
+        {
+            Storyboard storyboard = new Storyboard() { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever };
+            DoubleAnimation animation = new DoubleAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = new Duration(TimeSpan.FromSeconds(random.Next(2, 3)))
+            };
+            Storyboard.SetTarget(animation, enemy);
+            Storyboard.SetTargetProperty(animation, new PropertyPath(PropertyToAnimate));
+            storyboard.Children.Add(animation);
+            storyboard.Begin();
+
+            }
+        }
     }
-}
+
