@@ -13,7 +13,7 @@
             </Grid>
         </ControlTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid x:Name="grid" Margin="0,0,0,0">
         <Grid.Background>
             <RadialGradientBrush>
                 <GradientStop Color="#FF170646" Offset="1"/>
@@ -36,20 +36,20 @@
             <ContentControl Content="ContentControl" FontSize="16" Template="{StaticResource EnemyTemplate}"  />
         </StackPanel>
 
-        <ProgressBar Grid.Column="1" Grid.Row="2" Height="20"/>
-        <Canvas x:Name="PlayArea" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3">
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Height="20"/>
+        <Canvas x:Name="PlayArea" Height="0" Grid.ColumnSpan="3" MouseMove="PlayArea_MouseMove" MouseLeave="PlayArea_MouseLeave">
             <Canvas.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF0F0315" Offset="0.723"/>
                     <GradientStop Color="#FFA622EE" Offset="1"/>
                 </RadialGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="Human" Orientation="Vertical" Canvas.Left="-253" Canvas.Top="-75">
+            <StackPanel x:Name="humansp" Orientation="Vertical" Canvas.Left="15" Canvas.Top="185" HorizontalAlignment="Center" VerticalAlignment="Center" MouseDown="Humansp_MouseDown" >
                 <Ellipse Height="10" Fill="#FFF3ECEC" Width="10"/>
-                <Rectangle Fill="#FFFBF5F5" Height="25" Width="10"/>
+                <Rectangle x:Name="human" Fill="#FFFBF5F5" Height="25" Width="10"/>
             </StackPanel>
-            <TextBlock x:Name="GameOverText" TextWrapping="Wrap" Text="Game over" FontSize="72" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="-193"/>
-            <Rectangle x:Name="Target" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" Canvas.Left="122" Canvas.Top="-40">
+            <TextBlock x:Name="GameOverText" TextWrapping="Wrap"  Text="Game over" FontSize="64" FontFamily="Showcard Gothic" Canvas.Left="85" Canvas.Top="16" />
+            <Rectangle x:Name="target" Height="40" Width="40" RenderTransformOrigin="0.5,0.5" Canvas.Left="365" Canvas.Top="-30" MouseEnter="Target_MouseEnter">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
