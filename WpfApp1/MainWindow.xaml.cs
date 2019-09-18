@@ -73,7 +73,7 @@ namespace WpfApp1
         private void StartGame()
         {
             humansp.IsHitTestVisible = true;
-            humanCaptured = false;
+            humanCaptured = true;
             progressBar.Value = 0;
             StartButton.Visibility = Visibility.Collapsed;
             PlayArea.Children.Clear();
@@ -131,10 +131,10 @@ namespace WpfApp1
             if(targetTimer.IsEnabled && humanCaptured)
             {
                 progressBar.Value = 0;
-                Canvas.SetLeft(target, random.Next(100, (int)PlayArea.ActualWidth - 100));
-                Canvas.SetTop(target, random.Next(100, (int)PlayArea.ActualHeight - 100));
-                Canvas.SetLeft(humansp, random.Next(100, (int)PlayArea.ActualWidth - 100));
-                Canvas.SetTop(humansp, random.Next(100, (int)PlayArea.ActualHeight - 100));
+                Canvas.SetLeft(target, random.Next(100, (int)PlayArea.ActualWidth +100));
+                Canvas.SetTop(target, random.Next(100, (int)PlayArea.ActualHeight +100));
+                Canvas.SetLeft(humansp, random.Next(100, (int)PlayArea.ActualWidth +100));
+                Canvas.SetTop(humansp, random.Next(100, (int)PlayArea.ActualHeight +100));
                 humanCaptured = false;
                 humansp.IsHitTestVisible = true;
             }
