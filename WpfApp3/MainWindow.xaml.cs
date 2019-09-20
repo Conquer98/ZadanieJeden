@@ -35,7 +35,62 @@ namespace WpfApp3
             myLabel.Text = "Nazwa to " + name
                 + "\nx jest równe: " + x
                 + "\nd jest równe: " + d;
-            
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            int someValue = 4;
+            string name = "Karol";
+            if ((someValue == 3) && (name.Equals("Kornel")))
+            {
+                myLabel.Text = "someValue jest równe 3, a imię to Kornel";
+            }
+            myLabel.Text = "Wiersz ten jest wykonywany bez wzgledu na warunki";
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            int x = 5;
+            if (x == 10)
+            {
+                myLabel.Text = " x równa się 10";
+            }
+            else
+            {
+                myLabel.Text = " x nie równa się 10";
+            }
+
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+
+            while (count < 10)
+            {
+                count++;
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                count--;
+            }
+            myLabel.Text = "Odpowiedz brzmi: " + count;
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            int p = 2;
+            for (int q=2; q<32; q=q*2)
+            {
+                while (p<q)
+                {
+                    p = p * 2;
+                
+                }
+                q = p - q;
+            }
         }
     }
 }
