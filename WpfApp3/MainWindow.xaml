@@ -18,9 +18,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button" Content="Pokaż komunikat" HorizontalAlignment="Center" VerticalAlignment="Center" Width="240" FontSize="20" Click="Button_Click"/>
-        <Button x:Name="button1" Content="Sprawdzenie kol. warunku" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="240" FontSize="20"/>
-        <Button x:Name="button2" Content="If/Else" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="240" FontSize="20"/>
-        <Button x:Name="button3" Content="Pętla" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="240" FontSize="20"/>
+        <Button x:Name="button1" Content="Sprawdzenie kol. warunku" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="240" FontSize="20" Click="Button1_Click"/>
+        <Button x:Name="button2" Content="If/Else" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="240" FontSize="20" Click="Button2_Click"/>
+        <Button x:Name="button3" Content="Pętla" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="240" FontSize="20" Click="Button3_Click"/>
         <TextBlock x:Name="myLabel" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="myLabel" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="20"/>
+        <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="150,56,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Button4_Click"/>
     </Grid>
 </Window>
