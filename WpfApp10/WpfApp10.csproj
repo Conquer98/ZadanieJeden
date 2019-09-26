@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEB3B5DE-AC68-4216-BD01-5B03E3A17115}</ProjectGuid>
+    <ProjectGuid>{8E1CA6E7-0215-4E7F-AFFC-9BCCE788CFFB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfApp8</RootNamespace>
-    <AssemblyName>WpfApp8</AssemblyName>
+    <RootNamespace>WpfApp10</RootNamespace>
+    <AssemblyName>WpfApp10</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
