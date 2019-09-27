@@ -1,4 +1,5 @@
 #ZadanieJeden
-kaskasfkasf
-kslfkly
+Czeœæ chce cie zjeœæ
+Hello
+dlasjd
 
