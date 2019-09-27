@@ -7,10 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Lloydbutton" Content="Lloyd" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Margin="0,0,0,200" FontSize="20" Click="Lloydbutton_Click"/>
-        <Button x:Name="Lucindabutton" Content="Lucinda" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" FontSize="20" Height="30" Margin="0,0,0,50" Click="Lucindabutton_Click"/>
-        <Button x:Name="Zamienbutton" Content="Zamień" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" FontSize="20" Margin="0,100,0,0" Click="Zamienbutton_Click"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Margin="0,250,0,0" Height="30" FontSize="20" Click="Button_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Lloydbutton" Content="Lloyd" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Margin="301,95,331,295" FontSize="20" Click="Lloydbutton_Click" Grid.Column="1"/>
+        <Button x:Name="Lucindabutton" Content="Lucinda" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" FontSize="20" Height="30" Margin="301,170,331,220" Click="Lucindabutton_Click" Grid.Column="1"/>
+        <Button x:Name="Zamienbutton" Content="Zamień" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" FontSize="20" Margin="301,245,331,145" Click="Zamienbutton_Click" Grid.Column="1"/>
+        <Button x:Name="KlikButton" Content="Klik" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Margin="301,320,331,70" Height="30" FontSize="20" Click="Klik_Click" Grid.Column="1"/>
 
     </Grid>
 </Window>

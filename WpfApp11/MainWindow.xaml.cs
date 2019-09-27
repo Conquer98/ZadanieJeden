@@ -44,17 +44,15 @@ namespace WpfApp11
         {
             Elephant holder;
             holder = lloyd;
+            lloyd.TellMe("Cześć", lucinda);
             lloyd = lucinda;
             lucinda = holder;
             MessageBox.Show("Obiekty zamienione!");
         }
 
-        /*private void Button_Click(object sender, RoutedEventArgs e)
+        private void Klik_Click(object sender, RoutedEventArgs e)
         {
-            lloyd = lucinda;
-            lloyd.earSize = 4321;
-            lloyd.WhoAmI();
-
-        }*/
+            
+        }
     }
 }
