@@ -1,4 +1,0 @@
-#ZadanieJeden
-kaskasfkasf
-kslfkly
-
