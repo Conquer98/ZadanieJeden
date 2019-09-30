@@ -50,9 +50,6 @@ namespace WpfApp11
             MessageBox.Show("Obiekty zamienione!");
         }
 
-        private void Klik_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+       
     }
 }
